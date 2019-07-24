@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify demo | User's Currently Playing Track</title>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="description" content="Spotify demo | User's Currently Playing Track">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="https://lokeshdhakar.com/projects/color-thief/js/color-thief.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Asap|Damion" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-green.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+  <link rel="apple-touch-icon" href="albumart.png">
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <i id="infobutton" class="material-icons">info</i>
+  <div id="info" class="info"></div>
+  <div id="guide" class="guide">
+    <ol>
+      <li>This is a demo page to see <a target="_blank" href="https://developer.spotify.com/console/get-users-currently-playing-track/">User's Currently Playing Track</a> on Spotify.</li>
+      <li>Click on <i style='vertical-align:middle;' class="material-icons">info</i> icon to enter your market and OAuth token.</li>
+      <li>To obtain your OAuth token <a target="_blank" href="https://developer.spotify.com/documentation/general/guides/authorization-guide/">click here.</a></li>
+      <li>Track details will refresh in maximum 15secs. each time.</li>
+      <li>This page will use browser's localstorage to temporarily save your market and token details.</li>
+      <li>The access tokens expire after 1 hour, which is set by Spotify's side and follows OAuth2 Guidelines.</li>
+    </ol>
+
+  </div>
+  
+    <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="heading">Enter market and token</div>
+      <form action="javascript:void(0);" id="submitform">
+        <div class="mdl-textfield mdl-js-textfield">Market...
+            <input class="mdl-textfield__input" type="text" id="market">
+            
+        </div><br>
+          <!-- <input id="market" type="text" placeholder="Market.." name="" required><br> -->
+          <div class="mdl-textfield mdl-js-textfield">Token..
+            <textarea class="mdl-textfield__input" type="text" cols="30" rows= "8" id="token"></textarea>
+           
+          </div><br>
+          <!-- <textarea placeholder="Token.." id="token" rows="6" cols="30" required></textarea><br> -->
+          <button onclick="setData();" id="submitdata" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          Save
+          </button>
+          <!-- <button onclick="setData();" id="submitdata">Save</button> -->
+      </form>
+      </div>
+</div>
+ <div class="container">
+
+<img crossorigin="anonymous" id="albumcover" src="">
+<div class="track"></div> 
+<div class="album"></div>
+<div class="artists"></div>
+
+ </div>
+</body>
+</html>

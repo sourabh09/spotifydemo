@@ -1,0 +1,106 @@
+body{
+  background-color: #e6e6e6;
+}
+#info{
+	text-align: center;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #4E5860;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  text-align: center;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #FFF;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#infobutton{
+float: right;
+margin: 10px;
+color: #808080;
+cursor: pointer;
+}
+#market{
+	
+	text-transform: uppercase;
+}
+
+.heading{
+	color: #FFF;
+	font-size: 18px;
+}
+#albumcover{
+  max-width: 300px;
+  margin-bottom: 20px;
+  box-shadow: 0 0px 35px 0 rgba(255, 255, 255, 0.2), 0 9px 18px 0 rgba(255, 255, 255, 0.19);
+}
+
+.container{
+  text-align: center;
+  margin: 0 auto;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  line-height: normal;
+  
+}
+.track,.album,.artists{
+  font-family: 'Asap', sans-serif;
+  font-size: 24px;
+  color: #FFF;
+  margin: 15px;
+}
+
+.mdl-textfield{
+  color: #FFF;
+}
+#guide{
+  font-size: 20px;
+  flex-flow: wrap;
+  justify-content: center;
+  display: none;
+  padding: 5px;
+  margin-top: 30px;
+
+}
+ol{
+  font-size: 18px;
+}
+a{
+  color: #1DB954;
+}
+#submitdata{
+  background-color: #1DB954;
+}
